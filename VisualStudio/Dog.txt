@@ -1,0 +1,34 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Objektid
+{
+    class Dog
+    {
+        public string Name { get; set; }
+        public int Age { get; set; }
+        public string Color { get; set; }
+        public int RealYears { get; set; }
+        public Dog()
+        {
+            Name = "Murjam";
+            Age = 5;
+            Color = "Pruun";
+        }
+
+        public int CalculateDogYears()
+        {
+            RealYears = Age * 7;
+            return RealYears;
+        }
+
+        public void Bark()
+        {
+            Console.WriteLine("Auh!");
+        }
+
+    }
+}

@@ -1,0 +1,40 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Objektid
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            
+            Dog dog2 = new Dog();
+            Console.WriteLine("Sisesta koera nimi: ");
+            dog2.Name = Console.ReadLine();
+            Console.WriteLine("Sisesta koera värv: ");
+            dog2.Color = Console.ReadLine();
+            Console.WriteLine("Sisesta koera vanus: ");
+            dog2.Age = int.Parse(Console.ReadLine());
+
+            Console.WriteLine();
+            Console.WriteLine("Sinu koer:");
+            Console.WriteLine("Koera värv: " + dog2.Color);
+            Console.WriteLine("Koera vanus: " + dog2.Age);
+            Console.WriteLine("Koera nimi: " + dog2.Name);
+            Console.WriteLine("Koera päris vanus: " + dog2.CalculateDogYears());
+            Console.WriteLine();
+
+            Console.WriteLine("Teine Koer:");
+            Dog dog3 = new Dog();
+            Console.WriteLine("Koera nimi: " + dog3.Name);
+            Console.WriteLine(dog3.Name + " vanus: " + dog3.Age);
+            Console.WriteLine(dog3.Name + " vanus: " + dog3.Color);
+            dog3.Bark();
+            Console.WriteLine("Koera Päris vanus: " + dog3.CalculateDogYears());
+            Console.ReadKey();
+        }
+    }
+}
